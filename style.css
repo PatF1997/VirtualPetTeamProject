@@ -27,16 +27,24 @@ img{
 }
 
 
+
+
 .flex-container {
     display: flex;
     padding-top: 20px;
     
-     
 }
 
- .pikachu {
-
+.box {
+    display: block;
+    
+    transition: 0.2s;
 }
+
+.box:hover {
+transform: scale(1.1);
+}
+
 
 
 
