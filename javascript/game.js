@@ -8,11 +8,17 @@ const thirstBar = document.getElementById("thirstBar")
 const entertainmentBar = document.getElementById("entertainmentBar")
 const sleepBar = document.getElementById("sleepBar")
 
+let interval
+
 const getPetFromURL = () => {
     const query = window.location.search;
     const urlParams = new URLSearchParams(query)
 
     return urlParams.get("pet")
+}
+
+function calculatePercentage(num1, num2) {
+    return Math.trunc((num1/num2)*100)
 }
 
 function getColor(percentage) {
@@ -24,6 +30,17 @@ function getColor(percentage) {
         return "red";
     }
 }
+
+function getColor(percentage) {
+    if (percentage >= 60) {
+        return "green";
+    } else if (percentage >= 30) {
+        return "yellow";
+    } else {
+        return "red";
+    }
+}
+
 
 function startHealthBarAnimation(pokemonHealth) {
     for (let i = pokemonHealth; i > 0; i -= 1) {
@@ -78,16 +95,54 @@ window.addEventListener("load", () => {
         pet = new Pokemon("Bulbasaur", 80, 90, 80, 70);
     } else if (petName == "jigglypuff") {
         pet = new Pokemon("Jigglypuff", 70, 90, 90, 65);
-    }
+    } else { window.location.href = "./index.html" }
 
     document.getElementById("card").src = `./images/${pet.pokemonName}.png`
+    
+    const timerFunc = () => {
+        for (let i = 0; i < pet.pokemonHealth; i++) {
+            let percentage = pet.pokemonHealth -= 5
+            healthBar.value = percentage
+            healthBar.style.backgroundColor = getColor(percentage);
+        }
+
+        for (let i = 0; i < pet.pokemonHealth; i++) {
+            let percentage = pet.pokemonThirst -= 5
+            thirstBar.value = percentage
+            thirstBar.style.backgroundColor = getColor(percentage);
+        }
+
+        for (let i = 0; i < pet.pokemonHealth; i++) {
+            let percentage = pet.pokemonEntertainment -= 5
+            entertainmentBar.value = percentage
+            entertainmentBar.style.backgroundColor = getColor(percentage);
+        }
+
+        for (let i = 0; i < pet.pokemonHealth; i++) {
+            let percentage = pet.pokemonSleep -= 5
+            sleepBar.value = percentage
+            sleepBar.style.backgroundColor = getColor(percentage);
+        }
+    }
 
     startHealthBarAnimation(pet.pokemonHealth);
     startThirstBarAnimation(pet.pokemonThirst);
     startEntertainmentBarAnimation(pet.pokemonEntertainment);
     startSleepBarAnimation(pet.pokemonSleep);
-    
+
     eatButton.addEventListener("click", () => {
         pet.eat();
-    });    
+    });  
+    
+    drinkButton.addEventListener("click", () => {
+        pet.drink();
+    });  
+
+    sleepButton.addEventListener("click", () => {
+        pet.rest();
+    });  
+
+    playButton.addEventListener("click", () => {
+        pet.play();
+    });  
 });
