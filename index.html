@@ -9,7 +9,9 @@
 </head>
 <body>
     <div class="logo1">
+
     <img class="logo"  src="images/Choose your pokemon.png">
+
 
 </div>
 
@@ -17,26 +19,46 @@
 
    
 
-    <section class="pikachu">
+    <section  id="pikachuSound"  class="box">
+
+        <!-- <a href="game.html"> -->
+           
         
         <img src="images/pikachu.png">
-  
 
-    </section>
+        <button onmousedown="pikachuSound.play()"> Pikachu</button>
+ 
+        </a>
+        
+       </section>
 
-    <section class="charmander"> 
+
+    <section class="box"> 
+        <!-- <a href="game.html">  -->
        
         <img src="images/charmander.png">
+
+        <button onmousedown="charmanderSound.play()"  > Charmander</button>
+
+        </a>
     </section>
     
-    <section class="jigglypuff"> 
+    <section class="box"> 
+        <!-- <a href="game.html">  -->
         
-        <img src="images/jigglypuff.png">
+            <img src="images/jigglypuff.png">
+        
+            <button onmousedown="puffSound.play()"  > Jigglypuff</button>
+        </a>
     </section>
 
-    <section class="bulbasaur"> 
+    <section class="box"> 
+
+        <!-- <a href="game.html">  -->
         
         <img src="images/bulbasaur.png">
+        <button onmousedown="bulbSound.play()"   class="buttons"> Bulbasaur</button>
+        </a>
     </section>
     
 </main>
@@ -47,14 +69,22 @@
     <img src="images/tagline.png">
 
 
-<!-- <h3>Unleash the adventure, click a Pokemon card and start playing!</h3> -->
+
 </section>
 
-</div>
+<audio controls autoplay loop src="Pokemon Sounds/pkmntheme.mp3"></audio>
+
+
+<audio src="sounds/pikachu.mp3"></audio>
+<audio src="sounds/charmander.mp3"></audio>
+<audio src="sounds/puff_ASVnZwh.mp3"></audio>
+<audio src="sounds/bulbasaur-1.mp3"></audio>
 
 
 
 
+
+<script src="script.js"></script>
     
 </body>
 </html>

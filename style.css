@@ -25,11 +25,41 @@ img {
     max-height: 100%;
 }
 
+<<<<<<< HEAD
 .flex-container {
     display: flex;
     padding-top: 20px;    
 }
 
+=======
+
+
+
+.flex-container {
+    display: flex;
+    padding-top: 20px;
+    
+}
+
+.box {
+    display: block;
+    transition: 0.2s;
+}
+
+.box:hover {
+transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
+>>>>>>> e213e7862b6aa0e13f11d0a69f4563cfd46314ba
  .tagline {
     color: yellow;
     text-align: center;
