@@ -2,11 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Mode</title>
-    <script src="/javascript/url-parameters.js"></script>
+    <title>Pikachu</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/javascript/pet.js"></script>
 </head>
-<body onload="toReturn()">
-    
+<body>
+
+    <div class="container">
+
+        <div class="column">
+            
+            <div class = "container-1">
+                <img  src="images/game-page/progress.png" alt="progress" class="progress">
+           
+                
+            </div>
+
+
+            <ul>
+                <li><img id="eatButton" src="images/game-page/red.png" alt="health-button" class="logo-button">
+                    
+                        <div class="healthContainer">
+                            <div id="healthBar" class="healthBar"></div>
+                      </div>
+                </li>
+
+                <li>
+                    
+                    <img id="thirstButton" src="images/game-page/blue.png" alt="thirst-button" class="logo-button-1">
+                     
+                        <div class="thirstContainer">
+                            <div id="thirstBar" class="thirstBar"></div>
+                         
+                </li>
+                
+                <li>  
+                   
+                    <img id="entertainmentButton" src="images/game-page/yellow.png" alt="entertainment-button" class="logo-button-1">
+                    
+                        <div class="entertainmentContainer">
+                            <div id="entertainmentBar" class="entertainmentBar"></div>
+                            </div>
+                        
+                </li>
+
+                
+                <li>
+                    
+                    <img id="sleepButton" src="images/game-page/grey.png" alt="sleep-button" class="logo-button-1">
+                        <div class="sleepContainer">
+                            <div id="sleepBar" class="sleepBar"></div>
+                        </div>       
+                </li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <img id="card" src="images/pikachu-page/pikachu.png" alt="pet card" class="card">
+            <!--insert animation-->
+        </div>
+    </div>
+    <script src="/javascript/game.js"></script>
 </body>
 </html>
