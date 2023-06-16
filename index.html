@@ -5,86 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Game</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <div class="logo1">
+        <img class="logo"  src="images/Choose your pokemon.png">
+    </div>
 
-    <img class="logo"  src="images/Choose your pokemon.png">
+    <main class="flex-container">
+        <section id="pikachu" class="box">
+            <!-- <a href="game.html"> -->
+            <img src="images/pikachu.png">
+            </a>
+        </section>
 
 
-</div>
-
-<main class="flex-container">
-
-   
-
-    <section  id="pikachuSound"  class="box">
-
-        <!-- <a href="game.html"> -->
-           
+        <section id="charmander" class="box"> 
+            <!-- <a href="game.html">  -->
+            <img src="images/charmander.png">
+            </a>
+        </section>
         
-        <img src="images/pikachu.png">
-
-        <button onmousedown="pikachuSound.play()"> Pikachu</button>
- 
-        </a>
-        
-       </section>
-
-
-    <section class="box"> 
-        <!-- <a href="game.html">  -->
-       
-        <img src="images/charmander.png">
-
-        <button onmousedown="charmanderSound.play()"  > Charmander</button>
-
-        </a>
-    </section>
-    
-    <section class="box"> 
-        <!-- <a href="game.html">  -->
-        
+        <section id="jigglypuff" class="box"> 
+            <!-- <a href="game.html">  -->
             <img src="images/jigglypuff.png">
-        
-            <button onmousedown="puffSound.play()"  > Jigglypuff</button>
-        </a>
+            </a>
+        </section>
+
+        <section id="bulbasaur" class="box"> 
+            <!-- <a href="game.html">  -->
+            <img src="images/bulbasaur.png">
+            </a>
+        </section>
+    </main>
+    <section class="tagline"> 
+        <img src="images/tagline.png">
     </section>
 
-    <section class="box"> 
+    <audio hidden="hidden" controls autoplay loop src="Pokemon Sounds/pkmntheme.mp3"></audio>
+    <audio hidden="hidden" src="sounds/pikachu.mp3"></audio>
+    <audio hidden="hidden" src="sounds/charmander.mp3"></audio>
+    <audio hidden="hidden" src="sounds/puff_ASVnZwh.mp3"></audio>
+    <audio hidden="hidden" src="sounds/bulbasaur-1.mp3"></audio>
 
-        <!-- <a href="game.html">  -->
-        
-        <img src="images/bulbasaur.png">
-        <button onmousedown="bulbSound.play()"   class="buttons"> Bulbasaur</button>
-        </a>
-    </section>
-    
-</main>
-
-
-
-<section class="tagline"> 
-    <img src="images/tagline.png">
-
-
-
-</section>
-
-<audio controls autoplay loop src="Pokemon Sounds/pkmntheme.mp3"></audio>
-
-
-<audio src="sounds/pikachu.mp3"></audio>
-<audio src="sounds/charmander.mp3"></audio>
-<audio src="sounds/puff_ASVnZwh.mp3"></audio>
-<audio src="sounds/bulbasaur-1.mp3"></audio>
-
-
-
-
-
-<script src="script.js"></script>
-    
+    <script src="./script.js"></script>
+    <script src="./animations.js"></script>
 </body>
 </html>
