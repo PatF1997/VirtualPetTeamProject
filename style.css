@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     width: 100%;
     
+    
  
 }
 
@@ -14,6 +15,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 50px;   
+    cursor: pointer;
 
 
 }
@@ -46,19 +48,6 @@ transform: scale(1.1);
 
 
 
-
-
-
-
-
-
-
- .tagline {
-    color: yellow;
-    text-align: center;
-    padding-bottom: 70px;
- }
-
  .tagline {
     padding-top: 50px;
     width: 860px;
@@ -69,4 +58,23 @@ transform: scale(1.1);
 
 
     
+ }
+
+ .buttons {
+    color: black;
+    margin-left: 70px;
+    background-color: darkgray;
+    height: 40px;
+    width: 100px;
+    margin-top: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-left-color: white;
+    border-right-color: dimgrey;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    box-shadow: 2px 2px 0px 0px;
+    flex-direction: row;
+    cursor: pointer;
+
  }
