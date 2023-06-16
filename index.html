@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon Game</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/arcade-classic');
+</style>
+
 
 </head>
 <body>
     <div class="logo1">
 
-    <img class="logo"  src="images/Choose your pokemon.png">
+    <img id="logo"  class="logo" src="images/Choose your pokemon.png">
 
 
 </div>
@@ -21,12 +25,12 @@
 
     <section  id="pikachuSound"  class="box">
 
-        <!-- <a href="game.html"> -->
+      
            
         
-        <img src="images/pikachu.png">
+        <img onmouseover="pikachuSound.play()"  src="images/pikachu.png">
 
-        <button onmousedown="pikachuSound.play()"> Pikachu</button>
+         <a href="VirtualPetTeamProject/pikachu.html"><button   class="buttons">Pikachu </button>
  
         </a>
         
@@ -34,45 +38,52 @@
 
 
     <section class="box"> 
-        <!-- <a href="game.html">  -->
        
-        <img src="images/charmander.png">
+       
+        <img onmouseover="charmanderSound.play()"  src="images/charmander.png">
 
-        <button onmousedown="charmanderSound.play()"  > Charmander</button>
+        <a href="VirtualPetTeamProject/charmander.html"><button class="buttons"> Charmander</button>
 
         </a>
     </section>
     
     <section class="box"> 
-        <!-- <a href="game.html">  -->
         
-            <img src="images/jigglypuff.png">
         
-            <button onmousedown="puffSound.play()"  > Jigglypuff</button>
+            <img onmouseover="puffSound.play()"   src="images/jigglypuff.png">
+        
+            <a href="VirtualPetTeamProject/jigglypuff.html"> <button class="buttons"> Jigglypuff</button>
         </a>
     </section>
 
     <section class="box"> 
 
-        <!-- <a href="game.html">  -->
         
-        <img src="images/bulbasaur.png">
-        <button onmousedown="bulbSound.play()"   class="buttons"> Bulbasaur</button>
+        
+        <img  onmouseover="bulbSound.play()" src="images/bulbasaur.png">
+        <a href="VirtualPetTeamProject/bulbasaur.html"> <button class="buttons"> Bulbasaur</button>
         </a>
     </section>
     
 </main>
 
+<section class="tagline">
 
-
-<section class="tagline"> 
     <img src="images/tagline.png">
-
-
-
 </section>
 
-<audio controls autoplay loop src="Pokemon Sounds/pkmntheme.mp3"></audio>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <audio src="sounds/pikachu.mp3"></audio>
