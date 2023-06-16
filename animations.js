@@ -13,12 +13,19 @@ const puffSound = new Audio('sounds/puff.mp3');
 const bulbSound = new Audio('sounds/bulbasaur.mp3');
 
 //Pikachu Events
-pikachu.addEventListener("mousedown", function(){
+pikachu.addEventListener("mousedown", (event) => {
+    if (event.button != 0) {return false}
     if (hasClicked) {return false}
     pikachuSound.play()
     pikachu.classList.add("decrease-size")
 
-    window.location.href = "./pikachu.html";
+    charmander.remove();
+    jigglypuff.remove();
+    bulbasaur.remove();
+
+    setTimeout(function() {
+        window.location.href = "./pikachu.html";
+    }, 1500)
 
     hasClicked = true
 })
@@ -34,12 +41,19 @@ pikachu.addEventListener("mouseout", function(){
 });
 
 //Charmander Events
-charmander.addEventListener("mousedown", function(){
+charmander.addEventListener("mousedown", (event) => {
+    if (event.button != 0) {return false}
     if (hasClicked) {return false}
     charmanderSound.play()
     charmander.classList.add("decrease-size")
 
-    window.location.href = "./charmander.html";
+    pikachu.remove();
+    jigglypuff.remove();
+    bulbasaur.remove();
+
+    setTimeout(function() {
+        window.location.href = "./charmander.html";
+    }, 1000)
 
     hasClicked = true
 })
@@ -53,12 +67,19 @@ charmander.addEventListener("mouseout", function(){
 });
 
 //Jigglypuff Events
-jigglypuff.addEventListener("mousedown", function(){
+jigglypuff.addEventListener("mousedown", (event) => {
+    if (event.button != 0) {return false}
     if (hasClicked) {return false}
     puffSound.play()
     jigglypuff.classList.add("decrease-size")
 
-    window.location.href = "./jigglypuff.html";
+    pikachu.remove();
+    charmander.remove();
+    bulbasaur.remove();
+
+    setTimeout(function() {
+        window.location.href = "./jigglypuff.html";
+    }, 1000)
 
     hasClicked = true
 })
@@ -72,12 +93,19 @@ jigglypuff.addEventListener("mouseout", function(){
 });
 
 //Bulbasaur Events
-bulbasaur.addEventListener("mousedown", function(){
+bulbasaur.addEventListener("mousedown", (event) => {
+    if (event.button != 0) {return false}
     if (hasClicked) {return false}
     bulbSound.play()
     bulbasaur.classList.add("decrease-size")
 
-    window.location.href = "./bulbasaur.html";
+    pikachu.remove();
+    charmander.remove();
+    jigglypuff.remove();
+
+    setTimeout(function() {
+        window.location.href = "./bulbasaur.html";
+    }, 1000)
 
     hasClicked = true
 })
