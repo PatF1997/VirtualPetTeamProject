@@ -188,7 +188,7 @@ img {
 .card {
     width: 450px;
     height: auto; 
-    padding-top: 75px;
+    margin-top:30%;
     padding-left: 200px;
 }
 
