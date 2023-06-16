@@ -24,7 +24,7 @@ pikachu.addEventListener("mousedown", (event) => {
     bulbasaur.remove();
 
     setTimeout(function() {
-        window.location.href = "./pikachu.html";
+        window.location.href = "./game.html?pet=pikachu";
     }, 1500)
 
     hasClicked = true
@@ -52,7 +52,7 @@ charmander.addEventListener("mousedown", (event) => {
     bulbasaur.remove();
 
     setTimeout(function() {
-        window.location.href = "./charmander.html";
+        window.location.href = "./game.html?pet=charmander";
     }, 1000)
 
     hasClicked = true
@@ -78,7 +78,7 @@ jigglypuff.addEventListener("mousedown", (event) => {
     bulbasaur.remove();
 
     setTimeout(function() {
-        window.location.href = "./jigglypuff.html";
+        window.location.href = "./game.html?pet=jigglypuff";
     }, 1000)
 
     hasClicked = true
@@ -104,7 +104,7 @@ bulbasaur.addEventListener("mousedown", (event) => {
     jigglypuff.remove();
 
     setTimeout(function() {
-        window.location.href = "./bulbasaur.html";
+        window.location.href = "./game.html?pet=bulbasaur";
     }, 1000)
 
     hasClicked = true
