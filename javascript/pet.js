@@ -14,7 +14,6 @@ class Pokemon {
     eat() {
         this.pokemonHealth += 15;
         this.pokemonThirst -=5;
-        console.log(this.pokemonHealth)
     }
 
     drink() {

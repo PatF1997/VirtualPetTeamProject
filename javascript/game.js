@@ -8,7 +8,7 @@ const thirstBar = document.getElementById("thirstBar")
 const entertainmentBar = document.getElementById("entertainmentBar")
 const sleepBar = document.getElementById("sleepBar")
 
-let interval
+let speed = 250
 
 const getPetFromURL = () => {
     const query = window.location.search;
@@ -42,45 +42,29 @@ function getColor(percentage) {
 }
 
 
-function startHealthBarAnimation(pokemonHealth) {
-    for (let i = pokemonHealth; i > 0; i -= 1) {
-        setTimeout(() => {
-            const percentage = i;
-            healthBar.style.width = percentage + "%";
-            healthBar.style.backgroundColor = getColor(percentage);
-        }, 500 * (pokemonHealth - i));
-    }
+function updateHealthbar(pokemonHealth) {
+    const percentage = pokemonHealth;
+    healthBar.style.width = percentage + "%";
+    healthBar.style.backgroundColor = getColor(percentage);
 }
 
 
-function startThirstBarAnimation(pokemonThirst) {
-    for (let i = pokemonThirst; i > 0; i -= 1) {
-        setTimeout(() => {
-            const percentage = i;
-            thirstBar.style.width = percentage + "%";
-            thirstBar.style.backgroundColor = getColor(percentage);
-        }, 500 * (pokemonThirst - i));
-    }
+function updateThirstBar(pokemonThirst) {
+    const percentage = pokemonThirst;
+    thirstBar.style.width = percentage + "%";
+    thirstBar.style.backgroundColor = getColor(percentage);
 }
 
-function startEntertainmentBarAnimation(pokemonEntertainment) {
-    for (let i = pokemonEntertainment; i > 0; i -= 1) {
-        setTimeout(() => {
-            const percentage = i;
-            entertainmentBar.style.width = percentage + "%";
-            entertainmentBar.style.backgroundColor = getColor(percentage);
-        }, 500 * (pokemonEntertainment - i));
-    }
+function updateEntertainmentBar(pokemonEntertainment) {
+    const percentage = pokemonEntertainment;
+    entertainmentBar.style.width = percentage + "%";
+    entertainmentBar.style.backgroundColor = getColor(percentage);
 }
 
-function startSleepBarAnimation(pokemonSleep) {
-    for (let i = pokemonSleep; i > 0; i -= 1) {
-        setTimeout(() => {
-            const percentage = i;
-            sleepBar.style.width = percentage + "%";
-            sleepBar.style.backgroundColor = getColor(percentage);
-        }, 500 * (pokemonSleep - i));
-    }
+function updateSleepbar(pokemonSleep) {
+    const percentage = pokemonSleep;
+    sleepBar.style.width = percentage + "%";
+    sleepBar.style.backgroundColor = getColor(percentage);
 }
 
 window.addEventListener("load", () => {
@@ -98,37 +82,26 @@ window.addEventListener("load", () => {
     } else { window.location.href = "./index.html" }
 
     document.getElementById("card").src = `./images/${pet.pokemonName}.png`
-    
-    const timerFunc = () => {
-        for (let i = 0; i < pet.pokemonHealth; i++) {
-            let percentage = pet.pokemonHealth -= 5
-            healthBar.value = percentage
-            healthBar.style.backgroundColor = getColor(percentage);
-        }
 
-        for (let i = 0; i < pet.pokemonHealth; i++) {
-            let percentage = pet.pokemonThirst -= 5
-            thirstBar.value = percentage
-            thirstBar.style.backgroundColor = getColor(percentage);
-        }
+    setInterval(() => {
+        pet.pokemonHealth -= 2;
+        updateHealthbar(pet.pokemonHealth)
+    }, speed);
 
-        for (let i = 0; i < pet.pokemonHealth; i++) {
-            let percentage = pet.pokemonEntertainment -= 5
-            entertainmentBar.value = percentage
-            entertainmentBar.style.backgroundColor = getColor(percentage);
-        }
+    setInterval(() => {
+        pet.pokemonThirst -= 2;
+        updateThirstBar(pet.pokemonThirst)
+    }, speed);
 
-        for (let i = 0; i < pet.pokemonHealth; i++) {
-            let percentage = pet.pokemonSleep -= 5
-            sleepBar.value = percentage
-            sleepBar.style.backgroundColor = getColor(percentage);
-        }
-    }
+    setInterval(() => {
+        pet.pokemonEntertainment -= 2;
+        updateEntertainmentBar(pet.pokemonEntertainment)
+    }, speed);
 
-    startHealthBarAnimation(pet.pokemonHealth);
-    startThirstBarAnimation(pet.pokemonThirst);
-    startEntertainmentBarAnimation(pet.pokemonEntertainment);
-    startSleepBarAnimation(pet.pokemonSleep);
+    setInterval(() => {
+        pet.pokemonSleep -= 2;
+        updateSleepbar(pet.pokemonSleep)
+    }, speed);
 
     eatButton.addEventListener("click", () => {
         pet.eat();
