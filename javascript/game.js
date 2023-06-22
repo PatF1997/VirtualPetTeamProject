@@ -81,7 +81,7 @@ window.addEventListener("load", () => {
         pet = new Pokemon("Jigglypuff", 70, 90, 90, 65);
     } else { window.location.href = "./index.html" }
 
-    document.getElementById("card").src = `./images/${pet.pokemonName}.png`
+    document.getElementById("card").src = `./images/${pet.pokemonName}.png`.toLowerCase()
 
     setInterval(() => {
         pet.pokemonHealth -= 2;
